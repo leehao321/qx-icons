@@ -1,0 +1,40 @@
+name: fetch-icons
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/fetch-icons.yml
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download icons
+        run: |
+          mkdir -p icons
+          curl -fsSL -A Mozilla/5.0 -o icons/Lemon8.png https://iili.io/ndoDusI.png
+          curl -fsSL -A Mozilla/5.0 -o icons/GoodNotes.png https://iili.io/ndoyzYX.png
+          curl -fsSL -A Mozilla/5.0 -o icons/Grammarly.png https://iili.io/ndoy037.png
+          curl -fsSL -A Mozilla/5.0 -o icons/TVer.png https://iili.io/ndx9xMQ.png
+          curl -fsSL -A Mozilla/5.0 -o icons/Reddit.png https://iili.io/ndx99n4.png
+          curl -fsSL -A Mozilla/5.0 -o icons/JD.png https://iili.io/ndoyka1.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-Banking.png https://iili.io/ndx90VR.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-Invest.png https://iili.io/ndxHHba.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-IdentityCredit.png https://iili.io/ndx9D0B.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-Shopping.png https://iili.io/ndxHCJt.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-NewsSports.png https://iili.io/ndxHf0N.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-GovEdu.png https://iili.io/ndx96Ou.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-Health.png https://iili.io/ndx9LWx.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-Work.png https://iili.io/ndxHoen.png
+          curl -fsSL -A Mozilla/5.0 -o icons/US-CloudDev.png https://iili.io/ndx9wDG.png
+          file icons/*
+      - name: Commit icons
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add icons
+          git diff --cached --quiet && echo "No icon changes" && exit 0
+          git commit -m "Add Quantumult X PNG icons"
+          git push
