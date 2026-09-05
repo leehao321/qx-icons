@@ -1,23 +1,20 @@
 name: fetch-icons
+
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - .github/workflows/fetch-icons.yml
+
 permissions:
   contents: write
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Download and resize icons to 144x144
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+      - name: Download icons
         run: |
-          pip install pillow
           mkdir -p icons
           curl -fsSL -A Mozilla/5.0 -o icons/Lemon8.png https://iili.io/ndoDusI.png
           curl -fsSL -A Mozilla/5.0 -o icons/GoodNotes.png https://iili.io/ndoyzYX.png
@@ -34,20 +31,12 @@ jobs:
           curl -fsSL -A Mozilla/5.0 -o icons/US-Health.png https://iili.io/ndx9LWx.png
           curl -fsSL -A Mozilla/5.0 -o icons/US-Work.png https://iili.io/ndxHoen.png
           curl -fsSL -A Mozilla/5.0 -o icons/US-CloudDev.png https://iili.io/ndx9wDG.png
-          python3 - <<'PY'
-from pathlib import Path
-from PIL import Image
-for p in sorted(Path('icons').glob('*.png')):
-    im = Image.open(p).convert('RGBA')
-    im = im.resize((144, 144), Image.Resampling.LANCZOS)
-    im.save(p, format='PNG', optimize=True)
-    print(p.name, im.size, p.stat().st_size)
-PY
+      - name: Resize to 144x144
+        run: mogrify -resize 144x144 icons/*.png && identify icons/*.png
       - name: Commit icons
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add icons
-          git diff --cached --quiet && echo "No icon changes" && exit 0
-          git commit -m "Resize icons to 144x144"
+          git diff --cached --quiet || git commit -m "Resize icons to 144x144"
           git push
