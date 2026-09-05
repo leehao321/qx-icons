@@ -1,21 +1,21 @@
 {
   "name": "Hao QX Icons",
-  "description": "Personal Quantumult X icons by leehao321",
+  "description": "Personal Quantumult X icons by leehao321 · v2 jsDelivr",
   "icons": [
-    { "name": "Lemon8", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/Lemon8.png" },
-    { "name": "GoodNotes", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/GoodNotes.png" },
-    { "name": "Grammarly", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/Grammarly.png" },
-    { "name": "TVer", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/TVer.png" },
-    { "name": "Reddit", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/Reddit.png" },
-    { "name": "JD", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/JD.png" },
-    { "name": "US-Banking", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-Banking.png" },
-    { "name": "US-Invest", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-Invest.png" },
-    { "name": "US-IdentityCredit", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-IdentityCredit.png" },
-    { "name": "US-Shopping", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-Shopping.png" },
-    { "name": "US-NewsSports", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-NewsSports.png" },
-    { "name": "US-GovEdu", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-GovEdu.png" },
-    { "name": "US-Health", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-Health.png" },
-    { "name": "US-Work", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-Work.png" },
-    { "name": "US-CloudDev", "url": "https://raw.githubusercontent.com/leehao321/qx-icons/main/icons/US-CloudDev.png" }
+    { "name": "Lemon8", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/Lemon8.png" },
+    { "name": "GoodNotes", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/GoodNotes.png" },
+    { "name": "Grammarly", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/Grammarly.png" },
+    { "name": "TVer", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/TVer.png" },
+    { "name": "Reddit", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/Reddit.png" },
+    { "name": "JD", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/JD.png" },
+    { "name": "US-Banking", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-Banking.png" },
+    { "name": "US-Invest", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-Invest.png" },
+    { "name": "US-IdentityCredit", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-IdentityCredit.png" },
+    { "name": "US-Shopping", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-Shopping.png" },
+    { "name": "US-NewsSports", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-NewsSports.png" },
+    { "name": "US-GovEdu", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-GovEdu.png" },
+    { "name": "US-Health", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-Health.png" },
+    { "name": "US-Work", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-Work.png" },
+    { "name": "US-CloudDev", "url": "https://cdn.jsdelivr.net/gh/leehao321/qx-icons@main/icons/US-CloudDev.png" }
   ]
 }
