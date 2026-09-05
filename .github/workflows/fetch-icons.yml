@@ -11,8 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
       - name: Download and resize icons to 144x144
         run: |
+          pip install pillow
           mkdir -p icons
           curl -fsSL -A Mozilla/5.0 -o icons/Lemon8.png https://iili.io/ndoDusI.png
           curl -fsSL -A Mozilla/5.0 -o icons/GoodNotes.png https://iili.io/ndoyzYX.png
